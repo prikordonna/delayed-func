@@ -1,15 +1,26 @@
-function question () {
-    let ask = prompt("How many countries are there in the world?", 0);
+// Task 3. Implement function, that will return result after 10 second.
 
-    setTimeout (() => {
-        if ( ask == 195) {
-            console.log("You are correct!")
-        } else {
-            console.log("Sorry, you've run out of time.") 
-        }
-    }, 10000);
-
-    console.log("Okay, let me check the answer");
+async function hoursPerDay() {
+    let promise = new Promise(function(resolve, reject) {
+        setTimeout(() => {
+            console.log("Every person should sleep for 7–9 hours per night.");
+        }, 10000);
+        
+    })
 }
 
-question();
+// Task 4. Implement Promise inside Promise, haha. The second Promise should
+// call function from task #3, and you should use async and await.
+
+
+async function sleep(hours) {
+    let waitFunc = await hoursPerDay();
+    let promise = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("This is " + hours / 24 + " part of the day");
+        }, 5000);
+        resolve();
+        console.log("You slept today for " + hours + " hours");
+    });
+}
+
