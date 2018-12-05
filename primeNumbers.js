@@ -20,7 +20,7 @@ function isPrime (number,divider) {
 }
 
 
-function showPrimeNumber(number) {
+function showPrimeNumbers(number) {
     for (let i = number; i >= 1; i--) {
         if(isPrime(i, 2)) {
             console.log(i);
