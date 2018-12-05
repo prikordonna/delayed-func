@@ -10,9 +10,8 @@ const getName = () => {
     setTimeout(() => {
         let output = '';
         names.forEach((name) => {
-            output += `<li>${name.name}</li>`;
+            document.body.innerHTML += output + `<li>${name.name}</li>`;
         });
-        document.body.innerHTML += output;
     }, 10000);
 }
 
@@ -21,7 +20,7 @@ const getName = () => {
 // const hours = prompt("Please enter how many hours have you slept today?");
 
 const addName = (name) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             names.push(name);
             resolve();
