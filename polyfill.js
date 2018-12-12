@@ -8,10 +8,10 @@ if(!Array.prototype.map) {
             throw new Error(callback + ' is not a function');
         }
 
-        let anotherArr = [];
+        let newArr = [];
         for (let i = 0; i < this.length; i++) {
-           anotherArr[i] = callback(this[i]);
+           newArr[i] = callback(this[i]);
         }
-        return anotherArr;
+        return newArr;
     };
 }
