@@ -1,5 +1,5 @@
 if(!Array.prototype.map) {
-    Array.prototype.map = function(callback) {
+    Array.prototype.myMap = function(callback) {
         if (this == null) {
             throw new Error(' this is null or undefined');
         }
